@@ -33,7 +33,7 @@ export default function App() {
 
   useEffect(() => {
     if (error === 'ERR_BAD_REQUEST') {
-      toast.error('Something went wrong, try again later');
+      toast.error('There are some problems! Try again later.');
       return;
     }
     if (error) {
@@ -55,7 +55,14 @@ export default function App() {
 
         <ContactsTitle>Contacts</ContactsTitle>
         <Filter />
-        {contactsItems.length ? <ContactList /> : <p>No any contacts</p>}
+        {contactsItems.length ? (
+          <ContactList />
+        ) : (
+          <p>
+            There are no contacts in your Phonebook. Please add your first
+            contact!"
+          </p>
+        )}
       </div>
       <Toaster />
     </Container>

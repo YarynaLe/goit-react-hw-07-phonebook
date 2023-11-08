@@ -92,8 +92,6 @@ export const ContactForm = () => {
           Add Contact
         </Button>
       </SubmitBtn>
-
-      {/* <SubmitBtn type="submit">Add Contact</SubmitBtn> */}
     </FormWrap>
   );
 };
