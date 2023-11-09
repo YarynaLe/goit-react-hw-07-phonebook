@@ -1,6 +1,5 @@
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contacts/operations';
-import { MdDeleteForever } from 'react-icons/md';
 import { toast } from 'react-hot-toast';
 import { GoXCircle } from 'react-icons/go';
 
@@ -32,7 +31,7 @@ export const ContactListItem = ({ id, name, number }) => {
       </ContactItem>
 
       <DeleteContactItem onClick={() => removeContact(id)}>
-        <MdDeleteForever size={26} color={'lightCoral'} />
+        <GoXCircle size={26} color={'lightCoral'} />
       </DeleteContactItem>
     </ListItem>
   );
